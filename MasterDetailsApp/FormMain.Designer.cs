@@ -211,7 +211,7 @@
             // 
             this.pbxPhoto.Location = new System.Drawing.Point(603, 23);
             this.pbxPhoto.Name = "pbxPhoto";
-            this.pbxPhoto.Size = new System.Drawing.Size(369, 270);
+            this.pbxPhoto.Size = new System.Drawing.Size(369, 278);
             this.pbxPhoto.TabIndex = 13;
             this.pbxPhoto.TabStop = false;
             // 
