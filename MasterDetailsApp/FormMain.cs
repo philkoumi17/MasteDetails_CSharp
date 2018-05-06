@@ -261,7 +261,7 @@ namespace MasterDetailsApp
 
             if(dgvRow.Cells["dgvtxtEmpCompID"].Value != DBNull.Value)
             {
-                if(MessageBox.Show("Etes-vous sûr de supprimer cet enregistrement ?", "Master Details CRUD", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if(MessageBox.Show("Etes-vous sûr de supprimer cet enregistrement ?", "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     using(SqlConnection oConnect = new SqlConnection(connectString))
                     {
@@ -270,7 +270,7 @@ namespace MasterDetailsApp
                         oCmd.CommandType = CommandType.StoredProcedure;
                         oCmd.Parameters.AddWithValue("@EMPSOC_ID", Convert.ToInt32(dgvRow.Cells["dgvtxtEmpCompID"].Value));
                         oCmd.ExecuteNonQuery();
-                    }
+                    };
                 }
             }
             else
@@ -281,7 +281,7 @@ namespace MasterDetailsApp
 
         private void btnSupprimer_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Etes-vous sûr de supprimer cet enregistrement ?", "Master Details CRUD", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if(MessageBox.Show("Etes-vous sûr de supprimer cet enregistrement ?", "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 using(SqlConnection oConnect = new SqlConnection(connectString))
                 {
